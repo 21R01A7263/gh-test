@@ -1,6 +1,7 @@
 // src/app/dashboard/page.tsx
 import { auth, clerkClient } from '@clerk/nextjs/server';
 import { UserButton } from '@clerk/nextjs';
+import ContributionGraph from './contribution-graph';
 
 // Define an interface for the repository data structure for type safety
 interface GitHubRepo {
@@ -109,6 +110,7 @@ export default async function DashboardPage() {
           <p className='text-gray-500'>No repositories found.</p>
         )}
       </div>
+      <ContributionGraph />
     </main>
   );
 }
