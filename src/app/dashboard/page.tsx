@@ -2,6 +2,8 @@
 import { auth, clerkClient } from '@clerk/nextjs/server';
 import { UserButton } from '@clerk/nextjs';
 import ContributionGraph from './contribution-graph';
+import CommitHistory from './commit-history';
+// import CommitHistory from './commit-history';
 
 // Define an interface for the repository data structure for type safety
 interface GitHubRepo {
@@ -111,6 +113,7 @@ export default async function DashboardPage() {
         )}
       </div>
       <ContributionGraph />
+      <CommitHistory />
     </main>
   );
 }
