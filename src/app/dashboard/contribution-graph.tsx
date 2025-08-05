@@ -1,4 +1,5 @@
 // src/app/dashboard/contribution-graph.tsx
+export const revalidate = 7200;
 import { auth, clerkClient } from '@clerk/nextjs/server';
 
 interface ContributionDay {
@@ -132,5 +133,7 @@ const ContributionGraph = async () => {
     </div>
   );
 };
+
+
 
 export default ContributionGraph;
